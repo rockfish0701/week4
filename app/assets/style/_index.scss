@@ -1,0 +1,433 @@
+.banner {
+    color: $color-primary2;
+    height: 840px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png")  ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container {
+      height: 100%;
+      @include max_width(1140px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include align_items_flex_end();
+      p {
+        @include font_size_and_line_height(36px, 1.5);
+        font-weight: normal;
+        @include iPad {
+        @include font_size_and_line_height(20px, 1.5);
+        }
+        @include mobile {
+        @include font_size_and_line_height(16px, 1.5);
+        }
+      }
+      .title {
+        @include font_size_and_line_height(64px, 1.5);
+        font-weight: bold;
+        @include iPad {
+          @include font_size_and_line_height(48px, 1.5);
+        }
+        @include mobile {
+          @include font_size_and_line_height(32px, 1.5);
+        }
+      }
+    }
+  }
+  
+  .focus {
+    padding: 60px 15px 80px;
+    background-color: #aa06010d;
+    text-align: center;
+    @include font_size_and_line_height(16px, 1.5);
+    .container {
+      @include max_width(1140px);
+      margin: 0 auto;
+      text-align: center;
+      padding: 60px 15px 80px;
+      @include iPad {
+        padding-top: 40px;
+        padding-bottom: 56px;
+      }
+      @include mobile {
+        padding-top: 32px;
+        padding-bottom: 40px;
+      }
+      .subTitle {
+        color: $color-primary2;
+        font-weight: bolder;
+        margin-bottom: 40px;
+        @include font_size_and_line_height(48px, 1.5);
+        @include iPad {
+          @include font_size_and_line_height(32px, 1.5);
+          margin-bottom: 32px;
+        }
+        @include mobile {
+          @include font_size_and_line_height(24px, 1.5);
+          margin-bottom: 24px;
+        }
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          width: 20%;
+          @include iPad {
+            width: 45%;
+            &:nth-child(1),
+            &:nth-child(2) {
+              margin-bottom: 44px;
+            }
+          }
+          @include mobile {
+            width: 60%;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+              margin-bottom: 40px;
+            }
+          }
+          img {
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 16px;
+            @include iPad {
+              margin-bottom: 24px;
+            }
+            @include mobile {
+              margin-bottom: 16px;
+            }
+          }
+  
+          .thirdTitle {
+            color: $color-primary2;
+            font-weight: bold;
+            margin-bottom: 8px;
+            @include font_size_and_line_height(24px, 1.5);
+          }
+          p {
+            @include font_size_and_line_height(16px, 1.5);
+          }
+        }
+      }
+    }
+  }
+
+  .classicContainer {
+    padding: 60px 15px 80px;
+    @include max_width(1140px);
+    margin: 0 auto;
+    text-align: center;
+    @include iPad {
+      padding-top: 40px;
+      padding-bottom: 56px;
+    }
+    @include mobile {
+      padding-top: 32px;
+      padding-bottom: 40px;
+    }
+    .subTitle {
+      @include font_size_and_line_height(48px, 1.5);
+      margin-bottom: 40px;
+      @include iPad {
+        @include font_size_and_line_height(32px, 1.5);
+        margin-bottom: 32px;
+      }
+      @include mobile {
+        @include font_size_and_line_height(20px, 1.5);
+        margin-bottom: 20px;
+      }
+      font-weight: bold;
+      color: $color-primary2;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      @include font_size_and_line_height(48px, 1.5);
+      margin-bottom: 32px;
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+        @include iPad {
+          flex-direction: row;
+        }
+      }
+      &:nth-child(3) {
+        margin-bottom: 0px;
+      }
+      @include iPad {
+        @include font_size_and_line_height(28px, 1.5);
+      }
+  
+      font-style: italic;
+      color: $color-primary3;
+      font-weight: bold;
+      @include mobile {
+        position: relative;
+      }
+      img {
+        width: 60%;
+        object-fit: cover;
+        margin-right: 30px;
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+        @include mobile {
+          width: 100%;
+          margin-right: 0px;
+        }
+      }
+      .thirdTitle {
+        @include mobile {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        img {
+          width: 48px;
+          object-fit: cover;
+          margin-right: 8px;
+          @include iPad {
+            height: 40px;
+            width: 40px;
+          }
+          @include mobile {
+            height: 36.67px;
+            width: 36.67px;
+          }
+        }
+      }
+      .sunglasses {
+        margin-right: 30px;
+        @include iPad {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .design {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 705px;
+    width: 100%;
+    @include iPad {
+      height: 452px;
+    }
+    @include mobile {
+      height: 719px;
+    }
+    .container {
+      padding: 60px 15px 80px;
+      @include max_width(1140px);
+      margin: 0 auto;
+      text-align: center;
+      @include iPad {
+        padding-top: 40px;
+        padding-bottom: 56px;
+      }
+      @include mobile {
+        padding-top: 30px;
+        padding-bottom: 40px;
+      }
+      .subTitle {
+        @include font_size_and_line_height(48px, 1.5);
+        color: $color-secondary;
+        margin-bottom: 40px;
+        font-weight: bolder;
+        @include iPad {
+          @include font_size_and_line_height(32px, 1.5);
+          margin-bottom: 32px;
+        }
+        @include mobile {
+          @include font_size_and_line_height(20px, 1.5);
+          margin-bottom: 20px;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .item {
+          background-color: $color-secondary;
+          width: 48%;
+          position: relative;
+          @include font_size_and_line_height(72px, 1.5);
+          color: $color-primary3;
+          @include iPad {
+            @include font_size_and_line_height(32px, 1.5);
+          }
+          @include mobile {
+            width: 100%;
+          }
+          img {
+            object-fit: cover;
+            height: 455px;
+            width: 100%;
+            opacity: 0.5;
+            @include iPad {
+              height: 278px;
+            }
+            @include mobile {
+              height: 291px;
+            }
+          }
+          h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+          }
+        }
+        .item1 {
+          @include mobile {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+  
+  .customContainer {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include max_width(1140px);
+    margin: 0 auto;
+    @include iPad {
+      padding-top: 40px;
+      padding-bottom: 56px;
+    }
+    @include mobile {
+      padding-top: 32px;
+      padding-bottom: 40px;
+    }
+    .subTitle {
+      @include font_size_and_line_height(48px, 1.5);
+      color: $color-primary2;
+      margin-bottom: 40px;
+      font-weight: bolder;
+      text-align: center;
+      @include iPad {
+        @include font_size_and_line_height(32px, 1.5);
+      }
+      @include mobile {
+        @include font_size_and_line_height(20px, 2);
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li {
+        width: 23%;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 6px #dee2e6;
+        display: flex;
+        flex-direction: column;
+        @include iPad {
+          width: 49%;
+          &:nth-child(1),
+          &:nth-child(2) {
+            margin-bottom: 32px;
+          }
+        }
+        @include mobile {
+          width: 100%;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            margin-bottom: 16px;
+          }
+        }
+        img {
+          width: 100%;
+          height: 256px;
+          object-fit: cover;
+        }
+        .enclose {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+          border: 1px solid $color-black;
+          padding: 16px;
+          .name {
+            margin-bottom: 8px;
+          }
+          .text {
+            margin-bottom: 52px;
+          }
+        }
+      }
+    }
+  }
+  
+  .contact {
+    background-color: $color-dark;
+    .container {
+      padding-top: 60px;
+      padding-bottom: 80px;
+      @include max_width(1140px);
+      @include font_size_and_line_height(20px, 1.5);
+      .contact-inner {
+        width: 64%;
+        @include margin_0_auto;
+      }
+      .subTitle {
+        font-weight: bold;
+        @include font_size_and_line_height(48px, 1.5);
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .notice {
+        margin-bottom: 20px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        label {
+          margin-bottom: 4px;
+        }
+        input,
+        textarea {
+          padding: 8px;
+        }
+      }
+      .check {
+        flex-direction: row;
+        align-items: baseline;
+        margin-bottom: 40px;
+        input {
+          margin-right: 4px;
+        }
+      }
+      .button {
+        a {
+          display: block;
+          @include font_size_and_line_height(16px, 1.5);
+          padding-top: 16px;
+          padding-bottom: 16px;
+          width: 50%;
+          margin: 0 auto;
+          background-color: $color-primary3;
+          color: $color-secondary;
+          text-align: center;
+          @include iPad {
+            @include font_size_and_line_height(14px, 1.5);
+            padding: 10px 77px;
+          }
+          @include mobile {
+            width: 100%;
+            padding: 8px 54.5px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,207 @@
+.header {
+    text-align: center;
+    padding: 30px 88px;
+    @include iPad {
+        padding: 30px 39px;
+    }
+    @include mobile {
+        padding: 10px 0 0 0;
+    }
+    background-color: $color-primary3;
+    color: $color-secondary;
+    display: flex;
+    @include mobile {
+        flex-direction: column;
+    }
+    justify-content: space-between;
+    align-items: center;
+    .headerLogo {
+        a {
+            display: block;
+            width: 80px;
+            height: 48.57px;
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            white-space: nowrap;
+            text-indent: 101%;
+            overflow: hidden;
+        }
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+    .headerNav {
+        display: flex;
+        flex-wrap: wrap;
+        @include mobile {
+            width: 100%;
+        }
+        .item {
+            margin-right: 64px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include iPad {
+                margin-right: 40px;
+            }
+            @include mobile {
+                width: 50%;
+                margin-right: 0;
+                border: 1px solid $color-secondary;
+            }
+            a {
+                display: block;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-primary3;
+    color: $color-secondary;
+    .container {
+        @include max_width(1140px);
+        margin: 0 auto;
+        padding: 30px 15px;
+        .copyright {
+            display: flex;
+            justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+            }
+            p {
+                @include font_size_and_line_height(16px, 1.5);
+                @include mobile {
+                    @include font_size_and_line_height(14px, 1.5);
+                    margin-bottom: 8px;
+                }
+            }
+            .item {
+                display: flex;
+                @include mobile {
+                    flex-direction: column;
+                }
+                li {
+                    @include font_size_and_line_height(14px, 1.5);
+                    margin-right: 48px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    @include iPad {
+                        margin-right: 24px;
+                    }
+                    @include mobile {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-secondary;
+        padding-bottom: 24px;
+        margin-bottom: 32px;
+        @include iPad {
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        @include mobile {
+            padding-bottom: 24px;
+            margin-bottom: 16px;
+        }
+    }
+    .map {
+        display: flex;
+        margin-bottom: 36px;
+        @include iPad {
+            margin-bottom: 18px;
+        }
+        @include mobile {
+            display: none;
+        }
+        .item {
+            @include font_size_and_line_height(16px, 1.5);
+            margin-right: 48px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include iPad {
+                margin-right: 40px;
+            }
+        }
+        a {
+            @include font_size_and_line_height(16px, 1.5);
+        }
+    }
+    .contact {
+        li {
+            @include font_size_and_line_height(36px, 1.5);
+            @include iPad {
+                @include font_size_and_line_height(20px, 1.5);
+            }
+            @include mobile {
+                @include font_size_and_line_height(16px, 1.5);
+            }
+            a {
+                margin-left: 22px;
+                @include font_size_and_line_height(36px, 1.5);
+                @include iPad {
+                    margin-left: 11px;
+                    @include font_size_and_line_height(20px, 1.5);
+                }
+                @include mobile {
+                    margin-left: 4px;
+                    @include font_size_and_line_height(16px, 1.5);
+                }
+            }
+            img {
+                height: 48px;
+                object-fit: cover;
+                @include iPad {
+                    height: 24px;
+                }
+                @include mobile {
+                    height: 20px;
+                }
+            }
+        }
+        .li1 {
+            margin-bottom: 16px;
+            @include iPad {
+                margin-bottom: 12px;
+            }
+            @include mobile {
+                margin-bottom: 4px;
+            }
+        }
+    }
+    .social {
+        display: flex;
+        li {
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 0;
+            }
+            img {
+                height: 48px;
+                object-fit: cover;
+                @include iPad {
+                    height: 24px;
+                }
+            }
+            @include iPad {
+                margin-right: 24px;
+            }
+        }
+    }
+}

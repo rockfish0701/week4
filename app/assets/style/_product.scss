@@ -1,0 +1,313 @@
+.product_head {
+  a {
+    color: $color-black;
+    font-weight: bold;
+    @include font_size_and_line_height(32px, 1.5);
+    @include iPad {
+      @include font_size_and_line_height(24px, 1.3);
+    }
+    @include mobile {
+      @include font_size_and_line_height(12px, 1);
+    }
+  }
+    @include max_width(1140px);
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include mobile {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .category {
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      li {
+        border-left: 1px solid $color-secondary2;
+        border-right: 1px solid $color-secondary2;
+        width: 33.33%;
+        @include iPad {
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        @include mobile {
+          padding-top: 6px;
+          padding-bottom: 5px;
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 27px;
+          padding-bottom: 26px;
+        }
+      }
+      .item1 {
+        
+        img {
+          object-fit: cover;
+          width: 10%;
+          height: 10%;
+          margin-right: 22px;
+        }
+        @include iPad {
+          img {
+            width: 10%;
+            height: 10%;
+            margin-right: 17px;
+          }
+        }
+        @include mobile {
+          img {
+            width: 10%;
+            height: 10%;
+            margin-right: 2px;
+          }
+        }
+        a{
+          border-bottom: 8px solid $color-secondary;
+        }
+        :hover{
+          border-bottom: 8px solid $color-primary3;
+        }
+      }
+      .item2 {
+        
+        img {
+          object-fit: cover;
+          width: 10%;
+          height: 10%;
+          margin-right: 10px;
+        }
+        @include iPad {
+          img {
+            width: 10%;
+            height: 10%;
+            margin-right: 9px;
+          }
+        }
+        @include mobile {
+          img {
+            width: 10%;
+            height: 10%;
+            margin-right: 2px;
+          }   
+        }
+        a{
+          border-bottom: 8px solid $color-secondary;
+        }
+        :hover{
+          border-bottom: 8px solid $color-primary3;
+        }
+      }
+      .item3 {
+        img {
+          object-fit: cover;
+          width: 9%;
+          height: 9%;
+          margin-right: 22px;
+        }
+        @include iPad {
+          img {
+            width: 9%;
+            height: 9%;
+            margin-right: 17px;
+          }
+        }
+        @include mobile {
+          img {
+            width: 9%;
+            height: 9%;
+            margin-right: 2px;
+          }
+        }
+        a{
+          border-bottom: 8px solid $color-secondary;
+        }
+        :hover{
+          border-bottom: 8px solid $color-primary3;
+        }
+      }
+    }
+  }
+  
+  .bannerImage {
+    display: flex;
+    margin-bottom: 80px;
+    @include iPad {
+      margin-bottom: 56px;
+    }
+    @include mobile {
+      margin-bottom: 32px;
+    }
+    .bannerImage1 {
+      width: 50%;
+      height: 304px;
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-3.png);
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+      @include mobile {
+        height: 148px;
+      }
+    }
+    .bannerImage2 {
+      width: 50%;
+      height: 304px;
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png);
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+      @include mobile {
+        height: 148px;
+      }
+    }
+  }
+  
+  .productSun_bottom {
+    @include max_width(1140px);
+    margin: 0 auto;
+    padding-bottom: 160px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include iPad {
+      padding-bottom: 96px;
+    }
+    @include mobile {
+      padding-bottom: 0;
+    }
+    .title {
+      text-align: center;
+      @include font_size_and_line_height(42px, 1.5);
+      font-weight: bold;
+      @include iPad {
+        @include font_size_and_line_height(32px, 1.5);
+      }
+      @include mobile {
+        @include font_size_and_line_height(20px, 1.5);
+      }
+    }
+    .subTitle {
+      text-align: center;
+      font-weight: bold;
+      @include font_size_and_line_height(32px, 1.5);
+      margin-bottom: 40px;
+      @include iPad {
+        @include font_size_and_line_height(24px, 1.5);
+        margin-bottom: 32px;
+      }
+      @include mobile {
+        @include font_size_and_line_height(16px, 1.5);
+        margin-bottom: 20px;
+      }
+    }
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      @include font_size_and_line_height(24px, 1.5);
+      justify-content: space-between;
+      @include mobile {
+        @include font_size_and_line_height(16px, 1.5);
+      }
+      li {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-bottom: 104px;
+        }
+        width: 31%;
+        @include iPad {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-bottom: 72px;
+          }
+          width: 48%;
+        }
+        @include mobile {
+          width: 100%;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5) {
+            margin-bottom: 32px;
+          }
+        }
+  
+        .productText {
+          display: flex;
+          justify-content: space-between;
+          .productName {
+            font-weight: bold;
+          }
+          .productPrice {
+            font-weight: bold;
+            color: $color-primary3;
+          }
+        }
+        .productColor {
+          display: flex;
+          a {
+            display: block;
+          }
+          .productColor1 {
+            width: 24px;
+            height: 24px;
+            background-color: #5f3e2d;
+            margin-right: 8px;
+            @include mobile {
+              width: 15px;
+              height: 16px;
+              background-color: #5f3e2d;
+              margin-right: 4px;
+            }
+          }
+          .productColor2 {
+            width: 24px;
+            height: 24px;
+            background-color: #b75929;
+            @include mobile {
+              width: 15px;
+              height: 16px;
+              background-color: #b75929;
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+    }
+    .page {
+      display: none;
+      @include mobile {
+        margin-top: 40px;
+        margin-bottom: 56px;
+        display: flex;
+        justify-content: center;
+        li {
+          border: 1px solid $color-muted2;
+  
+          a {
+            @include font_size_and_line_height(16px, 1.5);
+            white-space: nowrap;
+            display: block;
+            color: $color-muted2;
+            padding: 5px 8px;
+          }
+          &:nth-child(3) {
+            background-color: $color-black;
+            a {
+              color: $color-secondary;
+            }
+          }
+          &:nth-child(7) {
+            background-color: $color-secondary3;
+          }
+        }
+      }
+    }
+  }
